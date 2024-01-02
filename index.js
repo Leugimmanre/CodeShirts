@@ -18,21 +18,22 @@ dotenv.config();
 connectBD();
 // 5. Allow CORS
 // Admitted domains
-const whiteList = [process.env.FRONTEND_URL];
-const corsOptions = {
-    origin: (origin, callback) => {
-        //console.log(origin);
-        // Request for admitted domains (whiteList)
-        const admitted = whiteList.some(domain => domain === origin);
-        if (admitted) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}
+// const whiteList = [process.env.FRONTEND_URL];
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//         //console.log(origin);
+//         // Request for admitted domains (whiteList)
+//         const admitted = whiteList.some(domain => domain === origin);
+//         if (admitted) {
+//             callback(null, true);
+//         } else {
+//             callback(new Error('Not allowed by CORS'));
+//         }
+//     }
+// }
 // Cors
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
+app.use(cors())
 
 // 6. Route management
 app.use("/", customersRoutes);
