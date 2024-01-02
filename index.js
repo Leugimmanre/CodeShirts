@@ -36,6 +36,7 @@ connectBD();
 app.use(cors())
 
 // 6. Route management
+app.use(express.static('public'));
 app.use("/", customersRoutes);
 app.use("/", productsRoutes);
 app.use("/", ordersRoutes);
