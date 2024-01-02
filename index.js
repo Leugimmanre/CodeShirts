@@ -36,12 +36,12 @@ connectBD();
 app.use(cors())
 
 // 6. Route management
-app.use(express.static('public'));
 app.use("/", customersRoutes);
 app.use("/", productsRoutes);
 app.use("/", ordersRoutes);
 app.use("/", usersRoutes);
-
+// 9 Server deployment
+app.use(express.static('public'));
 // 8. Makes the uploads folder public.
 app.use(express.static('uploads'));
 
