@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Leugimmanre/CodeShirts.git"
+    "url": "https://github.com/Leugimmanre/CodeShirts-backend.git"
   },
   "author": "Miguel Angel Martínez Rivera",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Leugimmanre/CodeShirts/issues"
+    "url": "https://github.com/Leugimmanre/CodeShirts-backend.git/issues"
   },
-  "homepage": "https://github.com/Leugimmanre/CodeShirts#readme",
+  "homepage": "https://github.com/Leugimmanre/CodeShirts-backend.git#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
