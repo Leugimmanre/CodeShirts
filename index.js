@@ -10,15 +10,7 @@ import usersRoutes from './routes/usersRoutes.js';
 
 // 1. app contains all server functionality
 const app = express();
-app.use(cors())
-
-// 2. Enable express to send json data (registration form)
-app.use(express.json());
-// 3. Call dotenv configuration
-dotenv.config();
-// 4. Call DB connect function
-connectBD();
-// 5. Allow CORS
+// 2. Allow CORS
 // Admitted domains
 // const whiteList = [process.env.FRONTEND_URL, process.env.FRONTEND_URL_LOCAL];
 // const corsOptions = {
@@ -35,7 +27,14 @@ connectBD();
 // }
 // // Cors
 // app.use(cors(corsOptions))
-// app.use(cors())
+app.use(cors())
+
+// 3. Enable express to send json data (registration form)
+app.use(express.json());
+// 4. Call dotenv configuration
+dotenv.config();
+// 5. Call DB connect function
+connectBD();
 
 // 6. Route management
 app.use("/", customersRoutes);
