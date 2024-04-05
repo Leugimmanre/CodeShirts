@@ -18,6 +18,7 @@ app.use(express.json());
 dotenv.config();
 // 5. Call DB connect function
 connectBD();
+app.use(cors())
 
 // 6. Route management
 app.use("/", customersRoutes);
