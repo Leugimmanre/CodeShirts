@@ -11,24 +11,7 @@ import usersRoutes from './routes/usersRoutes.js';
 // 1. app contains all server functionality
 const app = express();
 // 2. Allow CORS
-// Admitted domains
-// const whiteList = [process.env.FRONTEND_URL, process.env.FRONTEND_URL_LOCAL];
-// const corsOptions = {
-//     origin: (origin, callback) => {
-//         console.log(origin);
-//         // Request for admitted domains (whiteList);
-//         const admitted = whiteList.some(domain => domain === origin);
-//         if (admitted) {
-//             callback(null, true);
-//         } else {
-//             callback(new Error('Not allowed by CORS'));
-//         }
-//     }
-// }
-// // Cors
-// app.use(cors(corsOptions))
 app.use(cors())
-
 // 3. Enable express to send json data (registration form)
 app.use(express.json());
 // 4. Call dotenv configuration
